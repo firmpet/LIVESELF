@@ -11,23 +11,23 @@
             <class name="com.SELF.Runner.TestRunner" />
         </classes>
     </test> <!-- Test -->
-    <test name="WIN8TEST" annotations="JDK"
-          preserve-order="true">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="version" value="73.0"/>
-        <parameter name="platform" value="WIN10"/>
-        <classes>
-            <class name="com.SELF.Runner.TestRunner" />
-        </classes>
-    </test> <!-- Test -->
-    <test name="MACTEST" annotations="JDK"
-          preserve-order="true">
-        <parameter name="browser" value="safari"/>
-        <parameter name="version" value="12.0"/>
-        <parameter name="platform" value="macos 10.14"/>
-        <classes>
-            <class name="com.SELF.Runner.TestRunner" />
-        </classes>
-    </test> <!-- Test -->
+<!--    <test name="WIN8TEST" annotations="JDK"-->
+<!--          preserve-order="true">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="version" value="73.0"/>-->
+<!--        <parameter name="platform" value="WIN10"/>-->
+<!--        <classes>-->
+<!--            <class name="com.SELF.Runner.TestRunner" />-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+<!--    <test name="MACTEST" annotations="JDK"-->
+<!--          preserve-order="true">-->
+<!--        <parameter name="browser" value="safari"/>-->
+<!--        <parameter name="version" value="12.0"/>-->
+<!--        <parameter name="platform" value="macos 10.14"/>-->
+<!--        <classes>-->
+<!--            <class name="com.SELF.Runner.TestRunner" />-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
 </suite>

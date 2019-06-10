@@ -19,11 +19,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
         features = "src/test/resources/Features",
-        glue = {"stepDefinitions"},
-        tags = {"~@Ignore"},
+        glue = {"com.SELF.stepDefinitions"},
+        tags = {"@reg"},
         format = {
                 "pretty",
-                "html:target/cucumber-reports/cucumber-pretty",
+                "html:target/site/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun.txt"
         },plugin = "json:target/cucumber-reports/CucumberTestReport.json")

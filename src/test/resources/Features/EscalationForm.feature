@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Escalations (Stage 1 to Stage 3 (Copy)
 
   Scenario: Escalation Logs successful submission

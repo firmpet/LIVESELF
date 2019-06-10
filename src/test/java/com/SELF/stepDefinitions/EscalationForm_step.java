@@ -37,7 +37,7 @@ public class EscalationForm_step extends TestRunner {
         Thread.sleep(1000);
         driver.findElement(By.name("username")).sendKeys("joshuaayoade@firmstep.com");
         Thread.sleep(1000);
-        driver.findElement(By.name("password")).sendKeys("....");
+        driver.findElement(By.name("password")).sendKeys("bishoP80@");
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div/div/div/form/fieldset/div[3]/button")).click();
         Thread.sleep(2000);
@@ -58,37 +58,49 @@ public class EscalationForm_step extends TestRunner {
     }
 
     @When("^I entered Testing in the Text field$")
-    public void iEnteredTestingInTheTextField() {
-
+    public void iEnteredTestingInTheTextField() throws Throwable{
+        Thread.sleep(2000);
+        driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id='enterSomeText']")).sendKeys("Testing");
     }
 
     @And("^I click Cta Submit$")
-    public void iClickCtaSubmit() {
-
+    public void iClickCtaSubmit() throws Throwable{
+        Thread.sleep(2000);
+        driver.findElement(By.className("submitText")).click();
     }
 
     @Then("^Submission successful page is displayed$")
-    public void submissionSuccessfulPageIsDisplayed() {
-
+    public void submissionSuccessfulPageIsDisplayed() throws Throwable{
+        Assert.assertTrue(testAssert.validateElementExistByXpath(driver, "//*[text()='Thank you for submitting Escalation Form One']"));
+        Thread.sleep(1000);
     }
 
     @When("^I click on Cta MyRequests VThree$")
-    public void iClickOnCtaMyRequestsVThree() {
-
+    public void iClickOnCtaMyRequestsVThree() throws Throwable{
+        driver.switchTo().defaultContent();
+        Thread.sleep(1000);
+        driver.findElement(By.linkText("MyRequests V3")).click();
     }
 
     @Then("^My Request page is displayed with Data logs$")
-    public void myRequestPageIsDisplayedWithDataLogs() {
-
+    public void myRequestPageIsDisplayedWithDataLogs() throws Throwable{
+        Thread.sleep(1000);
+        Assert.assertFalse(testAssert.validateElementExistById(driver, "My Requests"));
+        //Thread.sleep(1000);
+        Assert.assertFalse(testAssert.validateElementExistById(driver, "MyRequestTable"));
     }
 
     @And("^I enter Case ID in the Search field$")
     public void iEnterCaseIDInTheSearchField() {
-
+        driver.switchTo().frame(driver.findElement(By.id("MyRequestsV3")));
+        driver.findElement(By.xpath("//td[@class='open-task']")).click();
     }
 
     @Then("^The case log info is display with stages indicated$")
     public void theCaseLogInfoIsDisplayWithStagesIndicated() {
+        driver.findElement(By.xpath("//h3[text()='Stage 1']")).isDisplayed();
     }
 
     @After
