@@ -2,9 +2,8 @@
 Feature: Escalations (Stage 1 to Stage 3 (Copy)
 
   Scenario: Escalation Logs successful submission
-    Given user is on home page
-    When I login with valid credentials
-    And I click on Cta Escalation Test Process
+    Given I login with valid credentials
+    When I click on Cta Escalation Test Process
     Then Escalation Form One is displayed
     When I entered Testing in the Text field
     And I click Cta Submit
