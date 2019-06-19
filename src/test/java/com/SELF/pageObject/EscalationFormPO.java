@@ -76,10 +76,13 @@ public class EscalationFormPO {
         CtaMyRequestsV3.click();
     }
     public void searchField() throws Throwable{
+        Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("MyRequestsV3")));
         Search.click();
     }
     public void caseLogsPage()throws Throwable{
+        Thread.sleep(2000);
         CaseLogs.isDisplayed();
+        Thread.sleep(2000);
     }
 }

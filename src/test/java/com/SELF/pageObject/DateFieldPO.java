@@ -26,7 +26,7 @@ public class DateFieldPO {
     @FindBy (xpath = "//*[@id='page']/section/header/h1/span")
     private WebElement DateFieldPage;
 
-    @FindBy (id = "date1")
+    @FindBy (xpath = "//*[@id='date1']")
     private WebElement DateFrom;
 
     @FindBy ( id = "date2")
@@ -49,21 +49,29 @@ public class DateFieldPO {
         wait.until(ExpectedConditions.elementToBeClickable(CtaDateFieldsManual));
 
         CtaDateFieldsManual.click();
+        Thread.sleep(1000);
     }
     public void dashboard()throws Throwable{
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         Thread.sleep(2000);
         DateFieldPage.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void dateField(){
+    public void dateField()throws Throwable{
+        DateFrom.click();
         DateFrom.sendKeys("15012019");
+        Thread.sleep(2000);
     }
-    public void dateField1(){
+    public void dateField1()throws Throwable{
+        DateTo.click();
         DateTo.sendKeys("20022019");
+        Thread.sleep(2000);
     }
-    public void timeField(){
+    public void timeField()throws Throwable{
+        Time.click();
         Time.sendKeys("1530");
+        Thread.sleep(1000);
     }
     public void submitBtn(){
         SubmitForm.click();

@@ -57,8 +57,6 @@ public class HTTPLookUpPO {
     private WebElement SubmissionResult;
 
 
-
-
     public void httpTesting() throws Throwable{
         Thread.sleep(3000);
         driver.switchTo().frame(driver.findElement(By.id("MyServices")));
@@ -76,7 +74,8 @@ public class HTTPLookUpPO {
     public void lookUpBtn(){
         CtaLookUp.click();
     }
-    public void nextBtn(){
+    public void nextBtn()throws Throwable{
+        Thread.sleep(2000);
         CtaNext.click();
     }
     public void clearField()throws Throwable{
@@ -98,11 +97,12 @@ public class HTTPLookUpPO {
     public void fillForm(){
         LookUpBtn.click();
     }
-    public void submitLink(){
+    public void submitLink()throws Throwable{
         CtaSubmit.click();
+        Thread.sleep(3000);
     }
     public void submitInfo()throws Throwable{
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         SubmissionResult.isDisplayed();
         Thread.sleep(2000);
     }

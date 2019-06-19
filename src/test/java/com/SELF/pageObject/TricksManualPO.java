@@ -93,8 +93,11 @@ public class TricksManualPO {
     public void digits()  {
         NumbersField.sendKeys("3");
     }
-    public void dob()  {
+    public void dob() throws Throwable  {
+        Thread.sleep(1000);
+        DOBField.click();
         DOBField.sendKeys("20112018");
+        Thread.sleep(1000);
     }
     public void postal()  {
         PostCode.sendKeys("EC2A 2DT");

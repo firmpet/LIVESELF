@@ -28,7 +28,7 @@ public class HTTPLookUp_step extends TestRunner {
     }
 
     @And("^click Next btn$")
-    public void clickNextBtn() {
+    public void clickNextBtn() throws Throwable{
         http.nextBtn();
     }
 

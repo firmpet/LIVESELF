@@ -4,8 +4,10 @@ package com.SELF.Runner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
@@ -47,8 +49,8 @@ public class TestRunner {
         WebDriverManager.iedriver().setup();
         driver = new InternetExplorerDriver();
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
 
 //        WebDriverManager.firefoxdriver().setup();
 //        driver = new FirefoxDriver();
@@ -61,13 +63,31 @@ public class TestRunner {
         driver.get(conFig.getString("URL"));
 
 
-
-
         //Browser Capabilities
+        //Internet Explorer
         DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "IE");
-        capabilities.setCapability(InternetExplorerDriver.
-                INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+        capabilities.setCapability("disable-popup-blocking",true);
+        capabilities.setCapability("unexpectedAlertBehaviour","accept");
+        capabilities.setCapability("nativeEvents",false);
+        capabilities.setCapability("RequireWindowFocus ", true);
+        capabilities.setCapability("ignoreProtectedModeSettings",true);
+        capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+
+        //capabilities.setJavascriptEnabled(true);
+        capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
+        capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+        capabilities.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP, true);
+        capabilities.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+
+
+       //Chrome Browser
+        capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+        ChromeOptions opts = new ChromeOptions();
+        opts.addArguments("start-maximized");
+        capabilities.setCapability(ChromeOptions.CAPABILITY, opts);
 
     }
 

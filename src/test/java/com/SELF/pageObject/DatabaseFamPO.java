@@ -35,13 +35,13 @@ public class DatabaseFamPO {
     @FindBy (className = "nextbutton")
     private WebElement Next;
 
-    @FindBy (className = "sectionNameTab ")
+    @FindBy (xpath = "//*[text()='subform 1']")
     private WebElement ReadOnlySubformColumn;
 
     @FindBy (className = "fa-chevron-right")
     private WebElement CtaNext;
 
-    @FindBy (xpath = "//*[@id=\"AF-Form-2193724e-7b47-44d7-bf73-03c8b98b7033\"]/section[1]/ul/li[3]/a")
+    @FindBy (xpath = "//*[@id='AF-Form-2193724e-7b47-44d7-bf73-03c8b98b7033']/section[1]/ul/li[3]/a")
     private WebElement CtaAddAEntry;
 
     @FindBy (id = "LastNameadd")
@@ -77,17 +77,21 @@ public class DatabaseFamPO {
     public void testBtn() {
         CtaTest.click();
     }
-
-    public void enterEmail() {
+    public void enterEmail() throws Throwable {
+        Thread.sleep(1000);
+        Email.clear();
+        Thread.sleep(2000);
         Email.sendKeys("support@firmstep.com");
     }
-
-    public void nextBtn() {
+    public void nextBtn() throws Throwable{
+        Thread.sleep(1000);
         Next.click();
     }
 
-    public void readOnlySubform() {
+    public void readOnlySubform() throws Throwable{
+        Thread.sleep(2000);
         ReadOnlySubformColumn.isDisplayed();
+        Thread.sleep(1000);
     }
 
     public void nextLink() {
@@ -102,17 +106,20 @@ public class DatabaseFamPO {
         EnterName.sendKeys("Dan");
     }
 
-    public void nameField() {
+    public void nameField()throws Throwable {
+        Thread.sleep(1000);
         FirstName.sendKeys("Daniel");
     }
 
-    public void email() {
+    public void email()throws Throwable {
+        Thread.sleep(2000);
         EnterEmail.sendKeys("test@example.com");
     }
 
     public void submitBtn()throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Submit.click();
+        Thread.sleep(2000);
     }
     public void successPage() throws Throwable{
         Thread.sleep(3000);

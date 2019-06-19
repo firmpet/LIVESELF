@@ -55,11 +55,13 @@ public class InterfaceCheckPO {
     public void contentPage()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("NewFAQs")));
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         FAQPage.isDisplayed();
+        Thread.sleep(1000);
     }
-    public void serviceBtn(){
-        driver.switchTo().defaultContent();
+    public void serviceBtn() throws Throwable{
+        driver.switchTo().defaultContent();;
+        Thread.sleep(2000);
         CtaServices.click();
     }
     public void pagecontents()throws Throwable{
@@ -96,7 +98,8 @@ public class InterfaceCheckPO {
     public void serviceLists()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("CapitaConnect")));
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         OnlineServices.isDisplayed();
+        Thread.sleep(2000);
     }
 }

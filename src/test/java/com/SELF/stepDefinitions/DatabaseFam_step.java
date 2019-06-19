@@ -28,12 +28,12 @@ public class DatabaseFam_step extends TestRunner {
     }
 
     @Then("^I click Next$")
-    public void iClickCtaNext()  {
+    public void iClickCtaNext() throws Throwable{
         data.nextBtn();
     }
 
     @And("^Read Only SubForm column is displayed$")
-    public void readOnlySubFormColumnIsDisplayed()  {
+    public void readOnlySubFormColumnIsDisplayed()throws Throwable  {
         data.readOnlySubform();
     }
 
