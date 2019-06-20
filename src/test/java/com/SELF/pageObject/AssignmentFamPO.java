@@ -77,24 +77,29 @@ public class AssignmentFamPO {
         SummaryField.sendKeys("Summary Test 2019-04-08");
     }
 
-    public void userField(){
+    public void userField()throws Throwable{
+        Thread.sleep(1000);
         SpecificUserField.click();
     }
 
-    public void enterEmail(){
+    public void enterEmail()throws Throwable{
         UserEmail.sendKeys("petermalt@firmstep.com");
+        Thread.sleep(2000);
     }
 
-    public void groupField(){
+    public void groupField()throws Throwable{
         SpecificGroup.click();
+        Thread.sleep(1000);
     }
 
-    public void groupName(){
+    public void groupName()throws Throwable{
         SpecificGroupField.sendKeys("CSA");
+        Thread.sleep(3000);
     }
 
-    public void submitBtn(){
+    public void submitBtn()throws Throwable{
         CtaSubmit.click();
+        Thread.sleep(1000);
     }
 
     public void formSubmit() throws Throwable{

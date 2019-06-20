@@ -39,7 +39,7 @@ public class TricksManual_step extends TestRunner {
     }
 
     @And("^I select Date of birth in the field$")
-    public void iSelectDateOfBirthInTheField() {
+    public void iSelectDateOfBirthInTheField() throws Throwable{
         tricks.dob();
     }
 

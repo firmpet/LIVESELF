@@ -9,19 +9,19 @@
         </classes>
     </test> <!-- Test -->
 
-<!--    <test name="Test_Chrome">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <classes>-->
-<!--            <class name="com.SELF.Runner.TestRunner" />-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <test name="Test_Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.SELF.Runner.TestRunner" />
+        </classes>
+    </test> <!-- Test -->
 
-<!--    <test name="Test_Firefox">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--            <class name="com.SELF.Runner.TestRunner" />-->
-<!--        </classes>-->
-<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <test name="Test_Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.SELF.Runner.TestRunner" />
+        </classes>
+    </test> <!-- Test -->
 
 
 <!--    <test name="Test_MAC"-->

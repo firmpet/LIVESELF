@@ -20,7 +20,7 @@ public class InterfaceCheck_step extends TestRunner {
     }
 
     @When("^I click on Cta Services$")
-    public void iClickOnCtaServices() {
+    public void iClickOnCtaServices() throws Throwable{
         inter.serviceBtn();
     }
 

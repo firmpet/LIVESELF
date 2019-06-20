@@ -98,13 +98,14 @@ public class HTTPLookUpPO {
         LookUpBtn.click();
     }
     public void submitLink()throws Throwable{
+        Thread.sleep(1000);
         CtaSubmit.click();
         Thread.sleep(3000);
     }
     public void submitInfo()throws Throwable{
         Thread.sleep(2000);
         SubmissionResult.isDisplayed();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
 }

@@ -33,7 +33,7 @@ public class DateField_step extends TestRunner {
     }
 
     @And("^I click Cta submit$")
-    public void iClickCtaSubmit()  {
+    public void iClickCtaSubmit() throws Throwable  {
         date.submitBtn();
     }
 

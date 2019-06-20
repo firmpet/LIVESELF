@@ -38,7 +38,7 @@ public class DateFieldPO {
     @FindBy (xpath = "//*[@id='AF-Form-8f081991-face-4e9b-9b24-f3cbe02f7bdb']/div/div/button[2]")
     private WebElement SubmitForm;
 
-    @FindBy (xpath = "//*[@id='page']/section/section/div/div[1]/p[2]")
+    @FindBy (xpath = "//p[text()='Thank you for submitting Date Fields Manual Test Form']")
     private WebElement SubmissionPage;
 
 
@@ -73,13 +73,15 @@ public class DateFieldPO {
         Time.sendKeys("1530");
         Thread.sleep(1000);
     }
-    public void submitBtn(){
+    public void submitBtn()throws Throwable{
+        Thread.sleep(2000);
         SubmitForm.click();
+        Thread.sleep(1000);
     }
     public void submit()throws Throwable{
         Thread.sleep(2000);
         SubmissionPage.isDisplayed();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 
 }
