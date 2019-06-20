@@ -21,7 +21,7 @@ public class TokensPO {
     @FindBy(linkText = "Tokens Process")
     private WebElement CtaTokens;
 
-    @FindBy (xpath = "//h1[@class='formName']")
+    @FindBy (xpath = "//*[text()='All Tokens Form']")
     private WebElement TokensDashboard;
 
     @FindBy (xpath = "//*[text()='Next']")
@@ -66,55 +66,78 @@ public class TokensPO {
 
 
     public void tokensBtn() throws Throwable {
-        Thread.sleep(3000);
-        driver.switchTo().frame(driver.findElement(By.id("MyServices")));
         Thread.sleep(2000);
+        driver.switchTo().frame(driver.findElement(By.id("MyServices")));
         CtaTokens.click();
+        Thread.sleep(3000);
     }
     public void tokenLists()throws Throwable{
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         Thread.sleep(2000);
         TokensDashboard.isDisplayed();
+        Thread.sleep(2000);
     }
     public void nextBtn(){
         Ctanext.click();
     }
-    public void assignmentColumn(){
+    public void assignmentColumn()throws Throwable{
+        Thread.sleep(2000);
         AssignmentTokens.isDisplayed();
+        Thread.sleep(2000);
     }
     public void nextbtn(){
         NextBtn.click();
     }
-    public void caseColumn(){
+    public void caseColumn()throws Throwable{
+        Thread.sleep(2000);
         CaseTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void citizenColumn(){
+    public void citizenColumn()throws Throwable{
+        Thread.sleep(2000);
         CitizenAndCSATokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void dateTimeColumn(){
+    public void dateTimeColumn()throws Throwable{
+        Thread.sleep(2000);
         DateTimeToken.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void escalationColumn(){
+    public void escalationColumn()throws Throwable{
+        Thread.sleep(2000);
         EscalationToken.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void formColumn(){
+    public void formColumn()throws Throwable{
+        Thread.sleep(2000);
         FormTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void processColumn(){
+    public void processColumn()throws Throwable{
+        Thread.sleep(2000);
         ProcessTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void subformColumn(){
+    public void subformColumn()throws Throwable{
+        Thread.sleep(2000);
         SubformTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void taskColumn(){
+    public void taskColumn()throws Throwable{
+        Thread.sleep(2000);
         TaskTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void mapColumn(){
+    public void mapColumn()throws Throwable{
+        Thread.sleep(2000);
         MapFieldTokens.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void othersColumn(){
+    public void othersColumn()throws Throwable{
+        Thread.sleep(2000);
         CtaOthers.isDisplayed();
+        Thread.sleep(2000);
     }
 
 

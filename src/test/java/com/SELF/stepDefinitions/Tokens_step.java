@@ -25,7 +25,7 @@ public class Tokens_step extends TestRunner {
     }
 
     @Then("^Assignment Tokens Column is displayed$")
-    public void assignmentTokensColumnIsDisplayed() {
+    public void assignmentTokensColumnIsDisplayed()throws Throwable {
         token.assignmentColumn();
     }
 
@@ -35,42 +35,32 @@ public class Tokens_step extends TestRunner {
     }
 
     @Then("^Case Tokens Column is displayed$")
-    public void caseTokensColumnIsDisplayed() {
+    public void caseTokensColumnIsDisplayed()throws Throwable {
         token.caseColumn();
     }
 
-//    @When("^I click Next Cta$")
-//    public void iClickNextCta() {
-//        token.btnNext();
-//    }
-
     @Then("^Citizen and CSA Tokens column is displayed$")
-    public void citizenAndCSATokensColumnIsDisplayed() {
+    public void citizenAndCSATokensColumnIsDisplayed()throws Throwable {
         token.citizenColumn();
     }
 
-//    @When("^Clicks Next$")
-//    public void ClicksNext() {
-//        token.nextLink();
-//    }
-
     @Then("^Date Time Token column is displayed$")
-    public void dateTimeTokenColumnIsDisplayed() {
+    public void dateTimeTokenColumnIsDisplayed()throws Throwable {
         token.dateTimeColumn();
     }
 
     @Then("^Escalation Tokens column is displayed$")
-    public void escalationTokensColumnIsDisplayed() {
+    public void escalationTokensColumnIsDisplayed()throws Throwable {
         token.escalationColumn();
     }
 
     @Then("^Form Tokens column is displayed$")
-    public void formTokensColumnIsDisplayed() {
+    public void formTokensColumnIsDisplayed()throws Throwable {
         token.formColumn();
     }
 
     @Then("^Process Tokens column is displayed$")
-    public void processTokensColumnIsDisplayed() {
+    public void processTokensColumnIsDisplayed()throws Throwable {
         token.processColumn();
     }
 
@@ -81,7 +71,7 @@ public class Tokens_step extends TestRunner {
     }
 
     @Then("^Task Tokens column is displayed$")
-    public void taskTokensColumnIsDisplayed() {
+    public void taskTokensColumnIsDisplayed()throws Throwable {
         token.taskColumn();
     }
 
@@ -92,7 +82,7 @@ public class Tokens_step extends TestRunner {
     }
 
     @And("^Others column is displayed$")
-    public void othersColumnIsDisplayed() {
+    public void othersColumnIsDisplayed()throws Throwable {
         token.othersColumn();
     }
 

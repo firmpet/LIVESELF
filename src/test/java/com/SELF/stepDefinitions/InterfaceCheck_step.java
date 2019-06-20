@@ -40,7 +40,7 @@ public class InterfaceCheck_step extends TestRunner {
     }
 
     @When("^I click on Cta MyRequests V$")
-    public void iClickOnCtaMyRequestsV() {
+    public void iClickOnCtaMyRequestsV() throws Throwable{
         inter.requestLink();
     }
 

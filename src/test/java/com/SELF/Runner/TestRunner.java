@@ -49,11 +49,11 @@ public class TestRunner {
         WebDriverManager.iedriver().setup();
         driver = new InternetExplorerDriver();
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//
+//        WebDriverManager.firefoxdriver().setup();
+//        driver = new FirefoxDriver();
 
         //Maximize page
         driver.manage().window().maximize();

@@ -82,14 +82,16 @@ public class InterfaceCheckPO {
         DashboardPage.isDisplayed()  ;
         Thread.sleep(1000);
         driver.switchTo().defaultContent();
+        Thread.sleep(1000);
     }
-    public void requestLink() {
+    public void requestLink() throws Throwable{
         CtaMyRequest.click();
+        Thread.sleep(2000);
     }
     public void casesLog() throws Throwable {
-        Thread.sleep(3000);
-        RequestCases.isDisplayed();
         Thread.sleep(2000);
+        RequestCases.isDisplayed();
+        Thread.sleep(3000);
     }
     public void connectNav() throws Throwable {
         Thread.sleep(1000);
@@ -98,8 +100,8 @@ public class InterfaceCheckPO {
     public void serviceLists()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("CapitaConnect")));
-        Thread.sleep(3000);
-        OnlineServices.isDisplayed();
         Thread.sleep(2000);
+        OnlineServices.isDisplayed();
+        Thread.sleep(3000);
     }
 }
