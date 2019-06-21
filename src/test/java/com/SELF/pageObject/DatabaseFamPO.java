@@ -124,6 +124,6 @@ public class DatabaseFamPO {
     public void successPage() throws Throwable{
         Thread.sleep(3000);
         SubmissionPage.isDisplayed();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 }

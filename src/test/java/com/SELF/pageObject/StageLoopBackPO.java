@@ -49,8 +49,9 @@ public class StageLoopBackPO {
     public void requestV3 ()  throws Throwable{
         Thread.sleep(1000);
         driver.switchTo().frame(driver.findElement(By.id("MyRequestsV3")));
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Stage1.click();
+        Thread.sleep(2000);
     }
     public void ctaContinue(){
         Continuelnk.click();
@@ -60,6 +61,7 @@ public class StageLoopBackPO {
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         Thread.sleep(1000);
         Answer.click();
+        Thread.sleep(2000);
     }
     public void submit() {
         Submission.click();

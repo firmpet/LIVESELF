@@ -88,7 +88,7 @@ public class CaseViewPO {
     public void submitOutcome() throws Throwable{
         Thread.sleep(2000);
         RefPage.isDisplayed();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
     public void requestV3Link()throws Throwable{
         driver.navigate().to("https://releasetesting-self.achieveservice.com/en");
