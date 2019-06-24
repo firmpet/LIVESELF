@@ -51,7 +51,7 @@ public class CaseView_step extends TestRunner {
     }
 
     @And("^click Cta Continue$")
-    public void clickCtaContinue() {
+    public void clickCtaContinue()throws Throwable {
         caseV.continueBtn();
     }
 

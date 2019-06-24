@@ -73,10 +73,11 @@ public class CaseViewPO {
         driver.navigate().to(config.getString("URLpage"));
     }
     public void casePage()throws Throwable{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Stage1CaseView.isDisplayed();
+        Thread.sleep(2000);
     }
     public void caseName() {
         TextField.sendKeys("Lambeth");
@@ -86,11 +87,12 @@ public class CaseViewPO {
         Thread.sleep(2000);
     }
     public void submitOutcome() throws Throwable{
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         RefPage.isDisplayed();
         Thread.sleep(3000);
     }
     public void requestV3Link()throws Throwable{
+        Thread.sleep(2000);
         driver.navigate().to("https://releasetesting-self.achieveservice.com/en");
         Thread.sleep(2000);
         MyRequestsV3Cta.click();
@@ -98,17 +100,21 @@ public class CaseViewPO {
     public void refTable()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("MyRequestsV3")));
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Reference.click() ;
+        Thread.sleep(1000);
     }
-    public void continueBtn(){
+    public void continueBtn()throws Throwable{
+        Thread.sleep(2000);
         CtaContinue.click();
+        Thread.sleep(1000);
     }
     public void caseView()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         Thread.sleep(1000);
         Stage2CaseView.isDisplayed();
+        Thread.sleep(2000);
     }
     public void textField()throws Throwable{
         Thread.sleep(2000);

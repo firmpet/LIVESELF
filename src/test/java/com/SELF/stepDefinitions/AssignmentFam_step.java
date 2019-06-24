@@ -27,13 +27,10 @@ public class AssignmentFam_step extends TestRunner {
 
     @And("^I select email and group from the dropdown fields$")
     public void iSelectEmailAndGroupFromTheDropdownFields() throws Throwable{
-        //Thread.sleep(3000);
-        assign.userField();
-        //Thread.sleep(3000);
+
+        //assign.userField();
         assign.enterEmail();
-        //Thread.sleep(3000);
-        assign.groupField();
-        //Thread.sleep(3000);
+        //assign.groupField();
         assign.groupName();
     }
 

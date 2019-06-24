@@ -76,12 +76,12 @@ public class DateFieldPO {
     public void submitBtn()throws Throwable{
         Thread.sleep(2000);
         SubmitForm.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     public void submit()throws Throwable{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         SubmissionPage.isDisplayed();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
 }

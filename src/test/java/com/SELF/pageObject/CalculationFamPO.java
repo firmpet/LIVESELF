@@ -33,8 +33,8 @@ public class CalculationFamPO {
     @FindBy (xpath = "//*[@id=\"AF-Form-03d61b5e-1366-4d86-ae3b-82548965e417\"]/section[2]/section/div[2]/div/span/div")
     private WebElement Title;
 
-    @FindBy (id = "tree")
-    private WebElement TreeField;
+//    @FindBy (id = "tree")
+//    private WebElement TreeField;
 
     @FindBy (id = "tree")
     private WebElement TreeDropdownField;
@@ -42,11 +42,11 @@ public class CalculationFamPO {
     @FindBy (id = "bench")
     private WebElement BenchField;
 
-    @FindBy (id = "bench")
-    private WebElement BenchDropdownField;
+//    @FindBy (id = "bench")
+//    private WebElement BenchDropdownField;
 
-    @FindBy (id = "lamppost")
-    private WebElement LamppostField;
+//    @FindBy (id = "lamppost")
+//    private WebElement LamppostField;
 
     @FindBy (id = "lamppost")
     private WebElement LamppostDropdownField;
@@ -98,63 +98,90 @@ public class CalculationFamPO {
         Thread.sleep(2000);
         CalculationsForm.isDisplayed();
     }
-    public void insertText(){
+    public void insertText()throws Throwable{
+        Thread.sleep(2000);
         InputField.sendKeys("Footpath,Park,Road,Cycle Track");
+        Thread.sleep(1000);
     }
-    public void pageTitle(){
+    public void pageTitle()throws Throwable{
+        Thread.sleep(1000);
         Title.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void inputField(){
-        TreeField.click();
-    }
-    public void insertText1(){
+//    public void inputField(){
+//        TreeField.click();
+//    }
+    public void insertText1()throws Throwable{
+        Thread.sleep(3000);
+        TreeDropdownField.click();
         TreeDropdownField.sendKeys("Yes");
+        Thread.sleep(1000);
     }
-    public void inputField1(){
-        BenchDropdownField.click();
-    }
-    public void insertText2(){
+//    public void inputField1(){
+//        BenchDropdownField.click();
+//    }
+    public void insertText2()throws Throwable{
+        Thread.sleep(2000);
+        BenchField.click();
         BenchField.sendKeys("Yes");
+        Thread.sleep(1000);
     }
-    public void inputField2(){
-        LamppostField.click();
-    }
-    public void insertText3(){
+//    public void inputField2(){
+//        LamppostField.click();
+//    }
+    public void insertText3()throws Throwable{
+        Thread.sleep(2000);
+        LamppostDropdownField.click();
         LamppostDropdownField.sendKeys("Yes");
+        Thread.sleep(1000);
     }
-    public void nextbtn(){
+    public void nextbtn()throws Throwable{
+        Thread.sleep(2000);
         BtnNext.click();
     }
-    public void stringManSection(){
+    public void stringManSection()throws Throwable{
+        Thread.sleep(2000);
         StringManipulationColumn.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void nextBtn(){
+    public void nextBtn()throws Throwable{
+        Thread.sleep(2000);
         CtaNext.click();
+        Thread.sleep(1000);
     }
-    public void subforms(){
+    public void subforms()throws Throwable{
+        Thread.sleep(2000);
         SubformsColumn.isDisplayed();
+        Thread.sleep(2000);
     }
-    public void recordBtn(){
+    public void recordBtn()throws Throwable{
+        Thread.sleep(2000);
         AddRecord.click();
+        Thread.sleep(2000);
     }
-    public void textField(){
+    public void textField()throws Throwable{
+        Thread.sleep(3000);
         AmountField.sendKeys("50");
+        Thread.sleep(3000);
     }
-    public void addRecordBtn(){
+    public void addRecordBtn()throws Throwable{
+        Thread.sleep(3000);
         CtaAddRecord.click();
+        Thread.sleep(3000);
     }
-    public void sum(){
+    public void sum()throws Throwable{
+        Thread.sleep(2000);
         TotalSum.isDisplayed();
+        Thread.sleep(3000);
     }
     public void submitBtn()throws Throwable{
-        Thread.sleep(4000);
-        CtaSubmit.click();
         Thread.sleep(2000);
+        CtaSubmit.click();
     }
     public void submitPage()throws Throwable{
         Thread.sleep(2000);
         SuccessfulPage.isDisplayed();
-        Thread.sleep(1000);
+        Thread.sleep(4000);
     }
 
 

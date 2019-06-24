@@ -20,67 +20,58 @@ public class CalculationFam_step extends TestRunner {
     }
 
     @When("^I enter Footpath, Park, Road and Cycle Track in the field$")
-    public void iEnterFootpathParkRoadAndCycleTrackInTheField()  {
+    public void iEnterFootpathParkRoadAndCycleTrackInTheField()throws Throwable{
         calcu.insertText();
     }
 
     @Then("^IF statement column is displayed with Extended IF statement as title$")
-    public void ifStatementColumnIsDisplayedWithExtendedIFStatementAsTitle()  {
+    public void ifStatementColumnIsDisplayedWithExtendedIFStatementAsTitle()throws Throwable{
         calcu.pageTitle();
     }
 
     @And("^I select Yes from all the three dropdown fields$")
     public void iSelectYesFromAllTheThreeDropdownFields() throws Throwable {
-        calcu.inputField();
-        Thread.sleep(2000);
+        //calcu.inputField();
         calcu.insertText1();
-        Thread.sleep(2000);
-        calcu.inputField1();
-        Thread.sleep(2000);
+        //calcu.inputField1();
         calcu.insertText2();
-        Thread.sleep(2000);
-        calcu.inputField2();
-        Thread.sleep(2000);
+        //calcu.inputField2();
         calcu.insertText3();
     }
 
     @And("^I click Nextlink$")
-    public void iClickNextlink()  {
+    public void iClickNextlink()throws Throwable{
         calcu.nextbtn();
     }
 
     @Then("^String Manipulation column page is displayed$")
-    public void stringManipulationColumnPageIsDisplayed()  {
+    public void stringManipulationColumnPageIsDisplayed()throws Throwable{
         calcu.stringManSection();
     }
 
     @And("^Select Nextlink$")
-    public void selectNextlink()  {
+    public void selectNextlink()throws Throwable{
         calcu.nextBtn();
     }
 
     @Then("^Subforms column page is displayed$")
-    public void subformsColumnPageIsDisplayed()  {
+    public void subformsColumnPageIsDisplayed()throws Throwable{
         calcu.subforms();
     }
 
     @And("^I click Cta Add Record$")
     public void iClickCtaAddRecord() throws Throwable {
-        Thread.sleep(2000);
         calcu.recordBtn();
-        Thread.sleep(3000);
     }
 
     @And("^I entered value in the field$")
     public void iEnteredValueInTheField() throws Throwable {
-        Thread.sleep(2000);
         calcu.textField();
-        Thread.sleep(5000);
         calcu.addRecordBtn();
     }
 
     @And("^Total sum of the record is displayed$")
-    public void totalSumOfTheRecordIsDisplayed()  {
+    public void totalSumOfTheRecordIsDisplayed()throws Throwable{
         calcu.sum();
     }
 

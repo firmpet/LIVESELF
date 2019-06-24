@@ -33,14 +33,14 @@ public class AssignmentFamPO {
     @FindBy (id = "summary_show")
     private WebElement SummaryField;
 
-    @FindBy (id = "select1")
-    private WebElement SpecificUserField;
+//    @FindBy (id = "select1")
+//    private WebElement SpecificUserField;
 
     @FindBy (id = "select1")
     private WebElement UserEmail;
 
-    @FindBy (id = "assignToSpecificG")
-    private WebElement SpecificGroup;
+//    @FindBy (id = "assignToSpecificG")
+//    private WebElement SpecificGroup;
 
     @FindBy (id = "assignToSpecificG")
     private WebElement SpecificGroupField;
@@ -77,24 +77,26 @@ public class AssignmentFamPO {
         SummaryField.sendKeys("Summary Test 2019-04-08");
     }
 
-    public void userField()throws Throwable{
-        Thread.sleep(1000);
-        SpecificUserField.click();
-    }
+//    public void userField()throws Throwable{
+//        Thread.sleep(1000);
+//        SpecificUserField.click();
+//    }
 
     public void enterEmail()throws Throwable{
+        UserEmail.click();
         UserEmail.sendKeys("petermalt@firmstep.com");
         Thread.sleep(2000);
     }
 
-    public void groupField()throws Throwable{
-        SpecificGroup.click();
-        Thread.sleep(1000);
-    }
+//    public void groupField()throws Throwable{
+//        SpecificGroup.click();
+//        Thread.sleep(1000);
+//    }
 
     public void groupName()throws Throwable{
+        SpecificGroupField.click();
         SpecificGroupField.sendKeys("CSA");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     public void submitBtn()throws Throwable{
