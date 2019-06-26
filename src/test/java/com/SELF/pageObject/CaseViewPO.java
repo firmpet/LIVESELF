@@ -30,9 +30,6 @@ public class CaseViewPO {
     @FindBy (id = "number1")
     private WebElement NumberField;
 
-    @FindBy (xpath = "//p[text()='Thank you for submitting Stage 1 Case View']")
-    private WebElement RefPage;
-
     @FindBy (linkText = "MyRequests V3")
     private WebElement MyRequestsV3Cta;
 
@@ -85,11 +82,6 @@ public class CaseViewPO {
     public void numbers()  throws Throwable{
         NumberField.sendKeys("4234");
         Thread.sleep(2000);
-    }
-    public void submitOutcome() throws Throwable{
-        Thread.sleep(4000);
-        RefPage.isDisplayed();
-        Thread.sleep(3000);
     }
     public void requestV3Link()throws Throwable{
         Thread.sleep(2000);

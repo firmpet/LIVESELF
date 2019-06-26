@@ -35,11 +35,6 @@ public class CaseView_step extends TestRunner {
         //driver.findElement(By.className("upload-button")).click();
     }
 
-    @Then("^Submission with reference page is displayed$")
-    public void submissionWithReferencePageIsDisplayed()throws Throwable{
-        caseV.submitOutcome();
-    }
-
     @When("^I click Cta MyRequests VThree$")
     public void iClickCtaMyRequestsVThree() throws Throwable{
         caseV.requestV3Link();
@@ -109,6 +104,7 @@ public class CaseView_step extends TestRunner {
     @Then("^results page is displayed with stages number$")
     public void resultsPageIsDisplayedWithStagesNumber() {
         Assert.assertFalse(testAssert.validateElementExistByXpath(driver, "//*[@id='heading3']/p"));
+
     }
 
 }

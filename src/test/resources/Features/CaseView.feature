@@ -7,7 +7,6 @@ Feature: Self - Case View
     Then Case View should displayed
     When I enter credentials in the fields
     And I click Cta Submit
-    Then Submission with reference page is displayed
     When I click Cta MyRequests VThree
     And Searched for reference
     And click Cta Continue

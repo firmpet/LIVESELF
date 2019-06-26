@@ -106,8 +106,7 @@ public class TestRunner {
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
 
-
-
+        driver.quit();
     }
 }
 
