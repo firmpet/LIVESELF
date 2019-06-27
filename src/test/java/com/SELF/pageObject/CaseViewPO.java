@@ -85,7 +85,8 @@ public class CaseViewPO {
     }
     public void requestV3Link()throws Throwable{
         Thread.sleep(2000);
-        driver.navigate().to("https://releasetesting-self.achieveservice.com/en");
+        driver.switchTo().defaultContent();
+        //driver.navigate().to("https://releasetesting-self.achieveservice.com/en");
         Thread.sleep(2000);
         MyRequestsV3Cta.click();
     }
@@ -116,12 +117,10 @@ public class CaseViewPO {
 
         Stage2NameField.sendKeys("Testing");
     }
-
     public void numberField() throws Throwable{
         Stage2NumberField.sendKeys("9870");
         Thread.sleep(2000);
     }
-
     public void searchField()throws Throwable {
         driver.switchTo().frame(driver.findElement(By.id("CommonDashboard")));
         Thread.sleep(2000);
@@ -145,7 +144,6 @@ public class CaseViewPO {
 //        System.out.println("Total Frames --" + size);
         driver.switchTo().frame(2);
         Stage3Text.sendKeys("Testing");
-
     }
     public void inputNumber(){
         Stage3Number.sendKeys("3526");

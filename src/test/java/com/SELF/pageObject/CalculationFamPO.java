@@ -33,20 +33,14 @@ public class CalculationFamPO {
     @FindBy (xpath = "//*[@id=\"AF-Form-03d61b5e-1366-4d86-ae3b-82548965e417\"]/section[2]/section/div[2]/div/span/div")
     private WebElement Title;
 
-//    @FindBy (id = "tree")
-//    private WebElement TreeField;
-
     @FindBy (id = "tree")
     private WebElement TreeDropdownField;
 
+    @FindBy (xpath = "//option[@value='yes']")
+    private WebElement OptionYes;
+
     @FindBy (id = "bench")
     private WebElement BenchField;
-
-//    @FindBy (id = "bench")
-//    private WebElement BenchDropdownField;
-
-//    @FindBy (id = "lamppost")
-//    private WebElement LamppostField;
 
     @FindBy (id = "lamppost")
     private WebElement LamppostDropdownField;
@@ -108,27 +102,18 @@ public class CalculationFamPO {
         Title.isDisplayed();
         Thread.sleep(2000);
     }
-//    public void inputField(){
-//        TreeField.click();
-//    }
     public void insertText1()throws Throwable{
         Thread.sleep(3000);
         TreeDropdownField.click();
-        TreeDropdownField.sendKeys("Yes");
+        OptionYes.click();
         Thread.sleep(1000);
     }
-//    public void inputField1(){
-//        BenchDropdownField.click();
-//    }
     public void insertText2()throws Throwable{
         Thread.sleep(2000);
         BenchField.click();
         BenchField.sendKeys("Yes");
         Thread.sleep(1000);
     }
-//    public void inputField2(){
-//        LamppostField.click();
-//    }
     public void insertText3()throws Throwable{
         Thread.sleep(2000);
         LamppostDropdownField.click();
