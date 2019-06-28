@@ -132,10 +132,10 @@ public class PhoneTeamRaisePO {
     }
     public void texts ()throws Throwable{
         driver.switchTo().frame(driver.findElement(By.id("form_one")));
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         TextField.click();
         TextField.sendKeys("Footpath,Park,Road,Cycle Track");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
     public void next()throws Throwable{
         Thread.sleep(2000);

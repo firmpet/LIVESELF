@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Self - Case View
 
   Scenario: TESTS-52 (Copy) (Copy) (Copy)
