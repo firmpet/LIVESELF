@@ -40,7 +40,7 @@ public class EscalationForm_step extends TestRunner {
     }
 
     @And("^I click Cta Submit$")
-    public void iClickCtaSubmit() {
+    public void iClickCtaSubmit() throws Throwable{
         esca.submitBtn();
     }
 

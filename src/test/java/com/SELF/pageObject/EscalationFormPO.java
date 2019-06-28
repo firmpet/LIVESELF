@@ -63,7 +63,8 @@ public class EscalationFormPO {
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         testField.sendKeys("Testing");
     }
-    public void submitBtn(){
+    public void submitBtn()throws Throwable{
+        Thread.sleep(2000);
         CtaSubmit.click();
     }
     public void submissionPage() throws Throwable{

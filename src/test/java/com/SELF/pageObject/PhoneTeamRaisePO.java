@@ -83,7 +83,6 @@ public class PhoneTeamRaisePO {
 
 
 
-
     public void csaSelectWorkspace (String PhoneURL) throws Throwable{
         Thread.sleep(2000);
         driver.navigate().to(config.getString("PhoneURL"));
@@ -131,6 +130,7 @@ public class PhoneTeamRaisePO {
         Thread.sleep(2000);
     }
     public void texts ()throws Throwable{
+        Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("form_one")));
         Thread.sleep(4000);
         TextField.click();
