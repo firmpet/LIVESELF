@@ -2,7 +2,7 @@ package com.SELF.stepDefinitions;
 
 import com.SELF.Runner.TestRunner;
 import com.SELF.pageObject.EscalationFormPO;
-import com.SELF.pageObject.LoginPO;
+import com.SELF.pageObject.TRF_LoginPO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,7 +13,7 @@ public class EscalationForm_step extends TestRunner {
     TestAssert testAssert;
 
     private EscalationFormPO esca = new EscalationFormPO(driver);
-    private LoginPO hp = new LoginPO(driver);
+    private TRF_LoginPO hp = new TRF_LoginPO(driver);
 
 
     @Given("^I login with valid credentials$")

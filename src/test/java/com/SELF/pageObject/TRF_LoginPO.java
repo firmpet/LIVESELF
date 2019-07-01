@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPO {
+public class TRF_LoginPO {
 
     private WebDriver driver;
 
     //To initiate web elements
-    public LoginPO(WebDriver driver){
+    public TRF_LoginPO(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

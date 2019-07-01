@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@rege"},
+        tags = {"@reg"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",
@@ -74,7 +74,7 @@ public class TestRunner {
         capabilities.setCapability("ignoreProtectedModeSettings",true);
         capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 
-        //capabilities.setJavascriptEnabled(true);
+        capabilities.setJavascriptEnabled(true);
         capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
         capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
@@ -85,6 +85,7 @@ public class TestRunner {
        //Chrome Browser
         capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+        capabilities.setCapability("unexpectedAlertBehaviour","ignore");
         ChromeOptions opts = new ChromeOptions();
         opts.addArguments("start-maximized");
         capabilities.setCapability(ChromeOptions.CAPABILITY, opts);

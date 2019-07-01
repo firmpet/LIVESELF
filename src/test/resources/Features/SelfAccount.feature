@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Self Account
     Scenario: Login My Requests
     Given I login with valid credentials
