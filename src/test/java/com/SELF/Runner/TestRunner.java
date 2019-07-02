@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@reg"},
+        tags = {"@rege"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",

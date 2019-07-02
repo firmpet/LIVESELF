@@ -91,9 +91,9 @@ public class PhoneTeamRaisePO {
         Thread.sleep(2000);
     }
     public void phoneCase () throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         PhoneModal.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
     public void textField () throws Throwable{
         Thread.sleep(2000);

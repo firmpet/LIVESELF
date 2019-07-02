@@ -54,8 +54,10 @@ public class CaseViewPO {
     @FindBy (xpath = "//option[@value='Stage 3']")
     private WebElement Stage3;
 
-    @FindBy(xpath = "//*[@id='AllProcesses']/table/tbody/tr[1]/td[11]/button[2]")
+    @FindBy(xpath = "//*[@id='AllProcesses']/table/tbody/tr[3]/td[11]/button[2]")
     private WebElement ContinueCta;
+
+    //*[@id="AllProcesses"]/table/tbody/tr[1]/td[11]/button[2]
 
     @FindBy (id = "text12")
     private WebElement Stage3Text;

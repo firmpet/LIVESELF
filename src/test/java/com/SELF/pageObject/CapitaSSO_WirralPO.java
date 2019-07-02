@@ -44,7 +44,7 @@ public class CapitaSSO_WirralPO {
     private WebElement RemoveBusinessRates;
 
 
-    
+
     public void capitaConnectBtn()throws Throwable{
         Thread.sleep(2000);
         CtaCapitaConnect.click();

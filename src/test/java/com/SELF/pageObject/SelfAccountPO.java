@@ -31,17 +31,15 @@ public class SelfAccountPO {
     @FindBy (xpath = "//*[@id='filter']/option[2]")
     private WebElement Options;
 
-    @FindBy (css = ".case-row:nth-child(1) .open-task-arrow")
+    @FindBy (xpath = "//*[@id='MyRequestTable']/tbody/tr[1]/td[1]")
     private WebElement OpenCase;
 
     @FindBy (linkText = "Continue - Welsh")
     private WebElement ContinueWelsh;
 
-    @FindBy (xpath = "//span[@class='submitText']")
+    @FindBy (xpath = "//*[text()='Submit']")
     private WebElement CtaSubmit;
-
-
-
+    //*[@id="AF-Form-e9886ef3-d5c3-44f6-802d-70e00261f636"]/div/div/button[2]
 
 
 
@@ -71,16 +69,16 @@ public class SelfAccountPO {
     public void selectCase()throws Throwable{
         Thread.sleep(2000);
         OpenCase.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     public void verification()throws Throwable{
         Thread.sleep(2000);
         ContinueWelsh.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     public void submitText()throws Throwable{
-        Thread.sleep(1000);
-        CtaSubmit.click();
         Thread.sleep(2000);
+        CtaSubmit.click();
+        Thread.sleep(3000);
     }
 }
