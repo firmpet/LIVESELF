@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Inbox - Email - Content and Open
 
   Scenario: Content and Open
