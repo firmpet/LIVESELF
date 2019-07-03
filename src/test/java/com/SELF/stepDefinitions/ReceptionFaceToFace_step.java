@@ -38,12 +38,12 @@ public class ReceptionFaceToFace_step extends TestRunner {
     @And("^I enter Firstname and Lastname$")
     public void iEnterFirstnameAndLastname() throws Throwable{
         f2f.name();
-        f2f.secondName();
     }
 
     @Then("^I select Cta Issue Ticket$")
     public void iSelectCtaIssueTicket()throws Throwable {
         f2f.submit();
+        f2f.secondName();
     }
 
     @And("^I select Service radio button$")

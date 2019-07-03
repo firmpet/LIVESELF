@@ -10,8 +10,8 @@ public class InboxEmail_ContentAndOpen_step extends TestRunner {
 
 
     @When("^I navigate to \"([^\"]*)\" inbox$")
-    public void i_navigate_to_inbox(String InboxEmailURL) throws Throwable {
-        inbox.inboxEmail(InboxEmailURL);
+    public void i_navigate_to_inbox(String CSASelectWorkspace) throws Throwable {
+        inbox.inboxEmail(CSASelectWorkspace);
     }
 
     @And("^I click Inbox modal$")

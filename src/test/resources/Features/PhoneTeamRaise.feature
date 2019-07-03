@@ -2,7 +2,7 @@
   Feature: Phone Team Raise Case
     Scenario: Phone Team Raise
       Given I login with valid credentials
-      When I navigate to "PhoneURL" to access CSA Select Workspace
+      When I navigate to "CSASelectWorkspace" to access CSA Select Workspace
       Then I select Phone Team modal
       When I enter test in search field
       And I click Search button

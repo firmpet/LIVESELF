@@ -14,15 +14,14 @@ public class PhoneTeamRaise_step extends TestRunner {
 
 
     @When("^I navigate to \"([^\"]*)\" to access CSA Select Workspace$")
-    public void iNavigateToToAccessCSASelectWorkspace(String PhoneURL) throws Throwable {
-        phone.csaSelectWorkspace(PhoneURL);
+    public void iNavigateToToAccessCSASelectWorkspace(String CSASelectWorkspace) throws Throwable {
+        phone.csaSelectWorkspace(CSASelectWorkspace);
     }
 
     @Then("^I select Phone Team modal$")
     public void iSelectPhoneTeamModal() throws Throwable{
         phone.phoneCase();
     }
-
 
     @When("^I enter test in search field$")
     public void iEnterTestInSearchField() throws Throwable{
@@ -85,5 +84,6 @@ public class PhoneTeamRaise_step extends TestRunner {
     public void iSelectSubmit() throws Throwable{
         phone.submit();
     }
+
 
 }

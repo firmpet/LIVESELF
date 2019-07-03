@@ -3,7 +3,7 @@ Feature: Inbox - Email - Content and Open
 
   Scenario: Content and Open
     Given I login with valid credentials
-    When I navigate to "InboxEmailURL" inbox
+    When I navigate to "CSASelectWorkspace" inbox
     And I click Inbox modal
     And I click on email
     Then I click Raise Case button

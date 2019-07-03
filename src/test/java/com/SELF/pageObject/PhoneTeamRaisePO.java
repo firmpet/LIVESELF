@@ -83,9 +83,9 @@ public class PhoneTeamRaisePO {
 
 
 
-    public void csaSelectWorkspace (String PhoneURL) throws Throwable{
+    public void csaSelectWorkspace (String CSASelectWorkspace) throws Throwable{
         Thread.sleep(2000);
-        driver.navigate().to(config.getString("PhoneURL"));
+        driver.navigate().to(config.getString("CSASelectWorkspace"));
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div/div/div/div/div[3]/a")).click();
         Thread.sleep(2000);
