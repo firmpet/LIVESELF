@@ -25,6 +25,9 @@ public class SelfAccountPO {
     @FindBy (css = "#fieldEnglish")
     private WebElement FieldWelsh;
 
+    @FindBy (xpath = "//*[text()='Continue']")
+    private WebElement ContinueCta;
+
     @FindBy (xpath = "//*[@id='filter']")
     private WebElement WelshField;
 
@@ -53,6 +56,11 @@ public class SelfAccountPO {
         Thread.sleep(2000);
         FieldWelsh.click();
         FieldWelsh.sendKeys("Test");
+        Thread.sleep(3000);
+    }
+    public void continueBtn()throws Throwable{
+        Thread.sleep(3000);
+        ContinueCta.click();
         Thread.sleep(2000);
     }
     public void filterField()throws Throwable {
@@ -69,7 +77,7 @@ public class SelfAccountPO {
     public void selectCase()throws Throwable{
         Thread.sleep(2000);
         OpenCase.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
     public void verification()throws Throwable{
         Thread.sleep(2000);

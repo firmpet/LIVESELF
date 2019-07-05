@@ -36,7 +36,7 @@ public class AssignmentFamPO {
 //    @FindBy (id = "select1")
 //    private WebElement SpecificUserField;
 
-    @FindBy (id = "select1")
+    @FindBy (xpath = "//*[@id='select1']")
     private WebElement UserEmail;
 
 //    @FindBy (id = "assignToSpecificG")
@@ -77,21 +77,11 @@ public class AssignmentFamPO {
         SummaryField.sendKeys("Summary Test 2019-04-08");
     }
 
-//    public void userField()throws Throwable{
-//        Thread.sleep(1000);
-//        SpecificUserField.click();
-//    }
-
     public void enterEmail()throws Throwable{
         UserEmail.click();
         UserEmail.sendKeys("petermalt@firmstep.com");
         Thread.sleep(2000);
     }
-
-//    public void groupField()throws Throwable{
-//        SpecificGroup.click();
-//        Thread.sleep(1000);
-//    }
 
     public void groupName()throws Throwable{
         SpecificGroupField.click();
@@ -107,6 +97,6 @@ public class AssignmentFamPO {
     public void formSubmit() throws Throwable{
         Thread.sleep(3000);
         SuccessfulSubmission.isDisplayed();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 }

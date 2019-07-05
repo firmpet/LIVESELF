@@ -19,6 +19,11 @@ public class SelfAccount_step extends TestRunner {
         welsh.textField();
     }
 
+    @And("^I click Continue Cta$")
+    public void iClickContinueCta()throws Throwable {
+        welsh.continueBtn();
+    }
+
     @And("^I select Open Welsh in the search field$")
     public void iSelectOpenWelshInTheSearchField() throws Throwable{
         welsh.filterField();
@@ -39,4 +44,6 @@ public class SelfAccount_step extends TestRunner {
     public void iClickSubmit()throws Throwable {
         welsh.submitText();
     }
+
+
 }

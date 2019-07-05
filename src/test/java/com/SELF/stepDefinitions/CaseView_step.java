@@ -32,7 +32,7 @@ public class CaseView_step extends TestRunner {
         //Upload File from C drive
         driver.findElement(By.className("resumable-browse-file")).sendKeys("C:\\Users\\Joshua Ayoade\\Pictures\\IP ss.PNG");
         //Thread.sleep(2000);
-        //driver.findElement(By.className("upload-button")).click();
+        //driver.findElement(By.className("upload-button")).click()
     }
 
     @When("^I click Cta MyRequests VThree$")
@@ -106,5 +106,6 @@ public class CaseView_step extends TestRunner {
         Assert.assertFalse(testAssert.validateElementExistByXpath(driver, "//*[@id='heading3']/p"));
 
     }
+
 
 }
