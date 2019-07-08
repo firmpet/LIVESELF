@@ -1,33 +1,36 @@
 package com.SELF.Runner;
 
 
+import com.cucumber.listener.ExtentProperties;
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.TestNGCucumberRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
+
+import static com.cucumber.listener.Reporter.setSystemInfo;
+import static com.cucumber.listener.Reporter.setTestRunnerOutput;
 
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@reg"},
+        tags = {"@regee"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",
+                "json:target/json/report_example.json",
                 "json:target/cucumber-reports/CucumberTestReport.json",
-                "rerun:target/cucumber-reports/rerun.txt"
-        },plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+                "rerun:target/cucumber-reports/rerun.txt",
+        },plugin = "com.cucumber.listener.ExtentCucumberFormatter:output/report.html")  //json:target/cucumber-reports/CucumberTestReport.json
 
 public class TestRunner {
 
@@ -38,7 +41,16 @@ public class TestRunner {
     @BeforeClass(alwaysRun = true)
     public void setUpCucumber() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+
+        //Extent Report
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmss");
+        Date curDate = new Date();
+        String strDate = sdf.format(curDate);
+        String fileName = "E:\\Extent_Reports\\report" + strDate + ".html";
+        ExtentProperties.INSTANCE.setReportPath(fileName);
+
     }
+
 
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
@@ -107,7 +119,13 @@ public class TestRunner {
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
 
+        setSystemInfo("user", System.getProperty("user.name"));
+        setSystemInfo("os", "windows");
+        setTestRunnerOutput("Sample test runner output message");
+
     }
+
+
     @AfterMethod
 
     public void afterMethod() {

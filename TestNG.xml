@@ -5,7 +5,7 @@
     <test name="Test_IE">
         <parameter name="browser" value="Internet Explorer"/>
         <classes>
-            <class name="com.SELF.Runner.TestRunner" />
+            <class name="com.SELF.Runner.TestRunner"/>
         </classes>
     </test> <!-- Test -->
 
@@ -30,5 +30,7 @@
 <!--            <class name="com.SELF.Runner.TestRunner" />-->
 <!--        </classes>-->
 <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
+
 
 </suite>
