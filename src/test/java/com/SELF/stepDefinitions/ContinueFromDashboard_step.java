@@ -2,7 +2,6 @@ package com.SELF.stepDefinitions;
 
 import com.SELF.Runner.TestRunner;
 import com.SELF.pageObject.ContinueFromDashboardPO;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -24,7 +23,6 @@ public class ContinueFromDashboard_step extends TestRunner {
     @Then("^click Submit$")
     public void clickSubmit() throws Throwable{
         cfd.submit();
-        //driver.switchTo().alert().accept();
     }
 
     @When("^I click on Dashboard$")
@@ -54,11 +52,12 @@ public class ContinueFromDashboard_step extends TestRunner {
 
     @And("^I click on continue$")
     public void iClickOnContinue() throws Throwable{
-
+        cfd.continueBtn();
     }
 
     @Then("^Submission message is displayed$")
     public void submissionMessageIsDisplayed() throws Throwable{
+        cfd.submitBtn();
     }
 
 

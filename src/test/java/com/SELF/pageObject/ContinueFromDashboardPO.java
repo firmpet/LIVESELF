@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class ContinueFromDashboardPO {
     ResourceBundle config;
     private WebDriver driver;
-    JavascriptExecutor js = (JavascriptExecutor)driver;
+    JavascriptExecutor jse = (JavascriptExecutor)driver;
 
     //To initialise Web element
     public ContinueFromDashboardPO(WebDriver driver){
@@ -35,11 +35,17 @@ public class ContinueFromDashboardPO {
     @FindBy (xpath = "//option[@value='Stage 2']")
     private WebElement Stage2;
 
-    @FindBy (xpath = "//*[@id='next']")
+    @FindBy (css = "#AllCases #next")
     private WebElement CtaNext;
 
     @FindBy (xpath = "//*[text()='Continue from Dashboard']")
     private WebElement Service;
+
+    @FindBy (xpath = "//*[@id='AllCases']/table/tbody/tr[1]/td[11]/button[2]")
+    private WebElement CtaContinue;
+
+    @FindBy (xpath = "//*[@id='AF-Form-c334d925-1fbb-42cf-82c0-c9a639603662']/div/div/button[2]")
+    private WebElement SubmitCta;
 
 
 
@@ -62,8 +68,7 @@ public class ContinueFromDashboardPO {
         Thread.sleep(2000);
     }
     public void dashboard()throws Throwable{
-        driver.findElement(By.xpath("//*[@id='page']/section/section/div/div[1]/p[4]/span")).getText();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         driver.switchTo().defaultContent();
         Thread.sleep(2000);
         CtaDashboard.click();
@@ -72,27 +77,39 @@ public class ContinueFromDashboardPO {
     public void allCases()throws Throwable{
         Thread.sleep(2000);
         driver.switchTo().frame(driver.findElement(By.id("CommonDashboard")));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         CtaAllCases.click();
         Thread.sleep(3000);
     }
     public void ctaStage2()throws Throwable{
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id='AllCases']/div[1]/div[1]/select[3]")).click();
         Thread.sleep(2000);
         Stage2.click();
         Thread.sleep(3000);
     }
     public void next()throws Throwable{
-        Thread.sleep(3000);
-        ((JavascriptExecutor) driver).executeScript("scroll(0,1000)");
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         CtaNext.click();
-        Thread.sleep(10000);
+        Thread.sleep(3000);
     }
     public void caseRef()throws Throwable{
         Thread.sleep(2000);
-        Service.click();
+        Service.isDisplayed();
+        Thread.sleep(2000);
+    }
+    public void continueBtn()throws Throwable{
+        Thread.sleep(2000);
+        CtaContinue.click();
+        Thread.sleep(3000);
+        driver.switchTo().defaultContent();
+    }
+    public void submitBtn()throws Throwable{
+        Thread.sleep(2000);
+        driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
+        //driver.switchTo().alert().accept();
+        Thread.sleep(4000);
+        SubmitCta.click();
         Thread.sleep(2000);
     }
 
