@@ -1,8 +1,8 @@
 package com.SELF.pageObject;
 
-import com.SELF.Runner.TestRunner;
-import org.omg.CORBA.PUBLIC_MEMBER;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -22,7 +22,7 @@ public class CapitaSSO_WirralPO {
     @FindBy (linkText = "Capita Connect v3")
     private WebElement CtaCapitaConnect;
 
-    @FindBy (xpath = "//*[text()='MyServices Dashboard']")
+    @FindBy (id = "dashboard_button")
     private WebElement MyServicesDashboard;
 
     @FindBy (xpath = "//*[text()='Add Service']")
@@ -51,11 +51,10 @@ public class CapitaSSO_WirralPO {
         Thread.sleep(2000);
     }
     public void ctaMyServices()throws Throwable{
-        String parent_window = driver.getWindowHandle();
         driver.switchTo().frame(driver.findElement(By.id("CapitaConnect")));
         Thread.sleep(1000);
         MyServicesDashboard.click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 
         //store parent window value in string
         String parentWindow = driver.getWindowHandle();

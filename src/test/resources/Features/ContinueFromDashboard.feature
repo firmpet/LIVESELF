@@ -1,4 +1,4 @@
-@regee
+@reg
 Feature: Continue From Dashboard
 
   Scenario: Dashboard

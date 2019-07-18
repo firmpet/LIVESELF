@@ -23,7 +23,7 @@ import static com.cucumber.listener.Reporter.setTestRunnerOutput;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@regee"},
+        tags = {"@reg"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",
@@ -63,7 +63,7 @@ public class TestRunner {
 
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver();
-//
+
 //        WebDriverManager.firefoxdriver().setup();
 //        driver = new FirefoxDriver();
 
