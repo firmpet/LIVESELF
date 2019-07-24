@@ -2,7 +2,6 @@ package com.SELF.stepDefinitions;
 
 import com.SELF.Runner.TestRunner;
 import com.SELF.pageObject.ConditionsCheckPO;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -46,6 +45,8 @@ public class ConditionsCheck_step extends TestRunner {
         condition.inputField2();
     }
 
-
-
+    @Then("^I click Submits$")
+    public void iClickSubmits() throws Throwable{
+        condition.ctaSubmit();
+    }
 }

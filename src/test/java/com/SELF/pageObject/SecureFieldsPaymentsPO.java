@@ -45,8 +45,6 @@ public class SecureFieldsPaymentsPO {
 
 
 
-
-
     public void fieldPaymentPage(String FieldPaymentURL)throws Throwable{
         driver.navigate().to(config.getString("FieldPaymentURL"));
     }

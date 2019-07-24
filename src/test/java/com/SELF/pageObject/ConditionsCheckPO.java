@@ -39,6 +39,9 @@ public class ConditionsCheckPO {
     @FindBy (xpath = "//input[@id='text2']")
     private WebElement TextField2;
 
+    @FindBy (xpath = "//span[text()='Submit']")
+    private WebElement Submit;
+
 
     public void formsLogin(String FormsURL)throws Throwable{
         driver.get(config.getString("FormsURL"));
@@ -76,6 +79,10 @@ public class ConditionsCheckPO {
         Thread.sleep(2000);
         TextField2.clear();
         TextField2.sendKeys("2 test");
+        Thread.sleep(2000);
+    }
+    public void ctaSubmit()throws Throwable{
+        Submit.click();
         Thread.sleep(2000);
     }
 }

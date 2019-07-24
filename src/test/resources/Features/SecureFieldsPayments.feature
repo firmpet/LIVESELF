@@ -6,7 +6,7 @@ Feature: Secure Fields Payment
     When I navigate to "FieldPayment" page
     Then I enter text in the field
     And I enter payment amount in the second field
-    Then I click Submit
+    Then I click Submits
     When I enter full name in the field
     And I enter full card number in the field
     And I enter expiry date

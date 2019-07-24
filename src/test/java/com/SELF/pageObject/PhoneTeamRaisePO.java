@@ -134,6 +134,7 @@ public class PhoneTeamRaisePO {
         driver.switchTo().frame(driver.findElement(By.id("form_one")));
         Thread.sleep(4000);
         TextField.click();
+        Thread.sleep(1000);
         TextField.sendKeys("Footpath,Park,Road,Cycle Track");
         Thread.sleep(3000);
     }

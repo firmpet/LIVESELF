@@ -29,9 +29,11 @@ public class CapitaSSO_WirralPO {
     private WebElement AddServicesPage;
 
     @FindBy (xpath = "//*[@id='accordionTile11']/div/div[2]/div/div[1]/div")
+//    //*[@id="accordionTile11"]/div/div[2]/div/div[1]/div
     private WebElement CouncilTax;
 
     @FindBy (xpath = "//*[@id='accordionTile12']/div/div[2]/div/div[1]/div")
+//    //*[@id="accordionTile23"]/div/div[2]/div/div[1]/div
     private WebElement BusinessRates;
 
     @FindBy (xpath = "//*[@id='addServices']/div[3]/div/input[2]")

@@ -9,4 +9,4 @@ Feature: Look Up
     When I select Yes cta
     And I enter number in the first text field
     And I enter test in the text second field
-    Then I click Submit
+    Then I click Submits

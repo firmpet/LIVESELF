@@ -125,13 +125,14 @@ public class CaseViewPO {
     }
     public void searchField()throws Throwable {
         driver.switchTo().frame(driver.findElement(By.id("CommonDashboard")));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         SearchRef.click();
+        Thread.sleep(3000);
     }
     public void nextStage () throws Throwable{
         Thread.sleep(3000);
         Stage3.click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
     }
     public void continues() throws Throwable{
         ContinueCta.click();
