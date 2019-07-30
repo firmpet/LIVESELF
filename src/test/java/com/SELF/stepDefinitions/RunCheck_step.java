@@ -2,131 +2,176 @@ package com.SELF.stepDefinitions;
 
 import com.SELF.Runner.TestRunner;
 import com.SELF.pageObject.RunCheckPO;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+
+import java.util.Set;
 
 public class RunCheck_step extends TestRunner {
-    private RunCheckPO run = new RunCheckPO(driver);
+    private RunCheckPO sample = new RunCheckPO(driver);
 
-
-    @Given("^I navigate to \"([^\"]*)\"$")
-    public void iNavigateTo(String RunCheckURL) throws Throwable {
-        run.CheckPages(RunCheckURL);
+    @Given("^I go to \"([^\"]*)\"$")
+    public void iGoTo(String RunCheckURL) throws Throwable {
+        sample.CheckPages(RunCheckURL);
     }
 
-    @Then("^I search for Integration run check with conditions$")
-    public void iSearchForIntegrationRunCheckWithConditions() throws Throwable{
-        run.inputField();
-        run.ctaIntegration();
+    @Then("^I look for Integration run check$")
+    public void iLookForIntegrationRunCheck() throws Throwable {
+        sample.inputField();
+        sample.ctaIntegration();
     }
 
-    @When("^I click on Cta Fill$")
-    public void iClickOnCtaFill() throws Throwable{
-        run.ctaFill();
+    @When("^I click on Cta Filll$")
+    public void iClickOnCtaFilll() throws Throwable {
+        sample.ctaFill();
     }
 
-    @Then("^I click on Submit$")
-    public void iClickOnSubmit() throws Throwable{
-        run.ctaSubmit();
+    @Then("^I click on Submitt$")
+    public void iClickOnSubmitt() throws Throwable {
+        String copiedText = driver.findElement(By.xpath("//*[@id='ID']")).getAttribute("value").toString();
+
+        System.out.println(copiedText);
+
+        Thread.sleep(4000);
+
+        sample.ctaSubmit();
+        Thread.sleep(4000);
+
+        sample.ctaViewData();
+        Thread.sleep(4000);
+
+        driver.findElement(By.xpath("//*[@id='DataTables_Table_1_filter']/label/input")).sendKeys(copiedText);
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//span[@class='submission-action']")).click();
+        Thread.sleep(3000);
+
+        //Stage 3
+        driver.findElement(By.xpath("//td[text()='Stage 3']//parent::*/td[@class='submission sorting_3']/div[@class='submission-file']/span[@class='submission-action']")).click();
+        Thread.sleep(3000);
+
+        sample.ctaSubmit();
+        Thread.sleep(4000);
+
+        driver.findElement(By.xpath("/html/body/div[2]/form[1]/div[3]/div/input")).sendKeys("QA TESTER");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='card_no']")).sendKeys("1111222233334444");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='expiry_date']")).sendKeys("12/19");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='card_security']")).sendKeys("201");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[2]/form[1]/input[2]")).click();
+        Thread.sleep(4000);
+
+        sample.ctaViewData();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@id='DataTables_Table_0_filter']/label/input")).sendKeys(copiedText);
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//span[@class='submission-action']")).click();
+        Thread.sleep(3000);
+
+        //Stage 2
+        driver.findElement(By.xpath("//td[text()='Stage 2']//parent::*/td[@class='submission sorting_3']/div[@class='submission-file']/span[@class='submission-action']")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.id("Test1")).sendKeys("Yes");
+        Thread.sleep(3000);
+
+        driver.findElement(By.id("Test3")).sendKeys("Yes");
+        Thread.sleep(3000);
+
+        driver.findElement(By.id("Test4")).sendKeys("Yes");
+        Thread.sleep(3000);
+
+        driver.findElement(By.id("Test5")).sendKeys("Yes");
+        Thread.sleep(3000);
+
+        sample.ctaSubmit();
+        Thread.sleep(3000);
+
+        sample.ctaViewData();
+        Thread.sleep(3000);
+
+        //Stage 3
+        driver.findElement(By.xpath("//*[@id='DataTables_Table_2_filter']/label/input")).sendKeys(copiedText);
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//span[@class='submission-action']")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[text()='Next Task']")).click();
+        Thread.sleep(3000);
+
+        sample.ctaSubmit();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[2]/form[1]/div[3]/div/input")).sendKeys("QA TESTER");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='card_no']")).sendKeys("1111222233334444");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='expiry_date']")).sendKeys("12/19");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@name='card_security']")).sendKeys("201");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("/html/body/div[2]/form[1]/input[2]")).click();
+        Thread.sleep(4000);
+
+        //Navigate to Integration Manager
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id='page']/div/nav[1]/div[2]/ul/li/a")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//a[@class='link_integrations']")).click();
+        Thread.sleep(3000);
+
+        //store parent window value in string
+        String parentWindow = driver.getWindowHandle();
+
+        //store the set of all windows
+        Set<String> allwindows= driver.getWindowHandles();
+
+        for (String childWindow : allwindows) {
+            if(!childWindow.equals(parentWindow))
+            {
+                driver.switchTo().window(childWindow);
+                driver.manage().window().maximize();
+            }
+        }
+
+        Thread.sleep(1000);
+
+        driver.findElement(By.id("link_logs")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//*[@id='maintable-list_filter']/label/input")).sendKeys(copiedText);
+        Thread.sleep(3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
     }
-
-    @When("^I click Cta View Data$")
-    public void iClickCtaViewData() throws Throwable{
-        run.ctaViewData();
-    }
-
-    @And("^I click on the case reference$")
-    public void iClickOnTheCaseReference() throws Throwable{
-        run.caseID();
-    }
-
-    @And("^I click Cta Next Task stage three$")
-    public void iClickCtaNextTaskStageThree() throws Throwable{
-        run.ctaStage3();
-    }
-
-    @Then("^Click Submits$")
-    public void clickSubmits() throws Throwable{
-        run.payment();
-    }
-
-    @Then("^I click Cta Next Task stage two$")
-    public void iClickCtaNextTaskStageTwo() throws Throwable{
-        run.ctaStage2();
-    }
-
-    @When("^I enter yes in text one$")
-    public void iEnterYesInTextOne()throws Throwable {
-        run.test1Field();
-    }
-
-    @And("^I enter yes in text three$")
-    public void iEnterYesInTextThree() throws Throwable{
-        run.test3Field();
-    }
-
-    @And("^I enter yes in text four$")
-    public void iEnterYesInTextFour() throws Throwable{
-        run.test4Field();
-    }
-
-    @And("^I enter yes in text five$")
-    public void iEnterYesInTextFive()throws Throwable {
-        run.test5Field();
-    }
-
-    @And("^I click Cta Next Task stage one$")
-    public void iClickCtaNextTaskStageOne() throws Throwable{
-        run.ctaNextTask();
-    }
-
-    @When("^I click on Cta Test User$")
-    public void iClickOnCtaTestUser() throws Throwable{
-        run.ctaTestUser();
-    }
-
-    @And("^I select Integration Manager$")
-    public void iSelectIntegrationManager()throws Throwable {
-        run.integration();
-    }
-
-    @Then("^I search for the case id$")
-    public void iSearchForTheCaseId() throws Throwable{
-        run.logsLink();
-        run.inputSearch();
-    }
-
-    @When("^I confirm creation Third stage$")
-    public void iConfirmCreationThirdStage() throws Throwable{
-        
-    }
-
-    @And("^I confirm Escalation Third stage$")
-    public void iConfirmEscalationThirdStage() throws Throwable{
-        
-    }
-
-    @And("^I confirm Creation Second stage$")
-    public void iConfirmCreationSecondStage() throws Throwable{
-        
-    }
-
-    @And("^I confirm Escalation second stage$")
-    public void iConfirmEscalationNdStageSecond() throws Throwable{
-        
-    }
-
-    @And("^I confirm Submission first stage$")
-    public void iConfirmSubmissionStStageFirst()throws Throwable {
-        
-    }
-
-    @And("^I confirm Pre Submission$")
-    public void iConfirmPreSubmission()throws Throwable {
-    }
-
-
-
-}

@@ -7,7 +7,6 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -95,12 +94,12 @@ public class TestRunner {
 
 
        //Chrome Browser
-        capabilities = DesiredCapabilities.chrome();
-        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-        capabilities.setCapability("unexpectedAlertBehaviour","ignore");
-        ChromeOptions opts = new ChromeOptions();
-        opts.addArguments("start-maximized");
-        capabilities.setCapability(ChromeOptions.CAPABILITY, opts);
+//        capabilities = DesiredCapabilities.chrome();
+//        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+//        capabilities.setCapability("unexpectedAlertBehaviour","ignore");
+//        ChromeOptions opts = new ChromeOptions();
+//        opts.addArguments("start-maximized");
+//        capabilities.setCapability(ChromeOptions.CAPABILITY, opts);
 
     }
 
@@ -132,7 +131,7 @@ public class TestRunner {
 
         // Close the driver
 
-        driver.quit();
+        //driver.quit();
 
     }
 }
