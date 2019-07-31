@@ -32,7 +32,6 @@ public class ContinueFromDashboard_step extends TestRunner {
         System.out.println(caseNumber);
         Thread.sleep(2000);
 
-        //cfd.submit();
         driver.findElement(By.xpath("//*[@id='AF-Form-44914046-5c8f-490e-a55c-5451c2f98513']/div/div/button[2]")).click();
         Thread.sleep(2000);
 
@@ -54,49 +53,10 @@ public class ContinueFromDashboard_step extends TestRunner {
         Thread.sleep(2000);
 
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id='AF-Form-c334d925-1fbb-42cf-82c0-c9a639603662']/div/div/button[2]")).click();
         Thread.sleep(2000);
-
-
-
-
     }
-
-//    @When("^I click on Dashboard$")
-//    public void iClickOnDashboard()throws Throwable {
-//        cfd.dashboard();
-//    }
-//
-//    @And("^I click on cta All Cases$")
-//    public void iClickOnCtaAllCases() throws Throwable{
-//        cfd.allCases();
-//    }
-//
-//    @Then("^I select stage two$")
-//    public void iSelectStageTwo() throws Throwable{
-//        cfd.ctaStage2();
-//    }
-//
-//    @When("^I click on Next$")
-//    public void iClickOnNext() throws Throwable{
-//        cfd.next();
-//    }
-//
-//    @And("^I click on case reference$")
-//    public void iClickOnCaseReference() throws Throwable{
-//        cfd.caseRef();
-//    }
-//
-//    @And("^I click on continue$")
-//    public void iClickOnContinue() throws Throwable{
-//        cfd.continueBtn();
-//    }
-//
-//    @Then("^Submission message is displayed$")
-//    public void submissionMessageIsDisplayed() throws Throwable{
-//        cfd.submitBtn();
-//    }
 
 
 
