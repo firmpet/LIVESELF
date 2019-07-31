@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Sample
 
   Scenario: Sample runs
