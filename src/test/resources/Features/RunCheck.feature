@@ -1,7 +1,7 @@
 @reg
-Feature: Sample
+Feature: Run Check
 
-  Scenario: Sample runs
+  Scenario: Checks
     Given I go to "RunCheckURL"
     Then I look for Integration run check
     When I click on Cta Filll
