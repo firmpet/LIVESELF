@@ -58,53 +58,53 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         //Auto Generate Email
         String regex = "releasetesting\\+ucmtestnew0000\\w{10}\\@firmstep\\.com";
         driver.findElement(By.xpath("//*[@id='edit-name']")).sendKeys(new Generex(regex).random());
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //Copy Auto Generated Email
         Thread.sleep(1000);
         String confirmEmail = driver.findElement(By.xpath("//*[@id='edit-name']")).getAttribute("value").toString();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         System.out.println(confirmEmail);
 
         driver.findElement(By.xpath("//*[@id='edit-mail']")).sendKeys(confirmEmail);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.id("edit-pass-pass1")).sendKeys("firmstep");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.id("edit-pass-pass2")).sendKeys("firmstep");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.id("edit-submit")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.navigate().to("https://releasetesting-dash.achieveservice.com/login/?support");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[4]/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/fieldset/div[1]/input[2]")).sendKeys(confirmEmail);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/fieldset/div[2]/input")).sendKeys("firmstep");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/form/fieldset/div[3]/button")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.navigate().to("https://releasetesting-forms.achieveservice.com/");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[3]/a")).click();
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='page']/div/nav[1]/div[2]/ul/li/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='forms-dropdown-menu']/li[4]/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //store parent window value in string
         String parentWindow = driver.getWindowHandle();
@@ -119,7 +119,7 @@ public class LoggingAndUCRNGen_step extends TestRunner {
             }
         }
 
-        Thread.sleep(1000);
+        Thread.sleep(8000);
 
         driver.findElement(By.xpath("//*[@id='users_table_filter']/label/input")).sendKeys(confirmEmail);
         Thread.sleep(3000);
@@ -143,54 +143,54 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         Thread.sleep(1000);
 
         String CopyText = driver.findElement(By.xpath("//*[@id='user_config']/form/div[4]/div/p")).getText();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         System.out.println(CopyText);
 
         driver.findElement(By.xpath("//*[@id='btn_show_user_model']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement (By.id("new_user_id_input")).sendKeys(CopyText);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='accordion_groups']/div/div[1]/h4/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[3]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[4]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[5]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[6]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[7]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[8]/label")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[9]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[10]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='usergroup_list']/ul/li/ul/li[13]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='save_user']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.navigate().to("https://releasetesting-inttest.achieveservice.com/login/?support");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[3]/a")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[text()='Settings']")).click();
         Thread.sleep(3000);

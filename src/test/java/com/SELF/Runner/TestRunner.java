@@ -7,7 +7,6 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -24,7 +23,7 @@ import static com.cucumber.listener.Reporter.setTestRunnerOutput;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@rege"},
+        tags = {"@reg"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",
@@ -62,8 +61,8 @@ public class TestRunner {
         WebDriverManager.iedriver().setup();
         driver = new InternetExplorerDriver();
 
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
 
 //        WebDriverManager.firefoxdriver().setup();
 //        driver = new FirefoxDriver();
@@ -133,7 +132,7 @@ public class TestRunner {
 
         // Close the driver
 
-        //driver.quit();
+        driver.quit();
 
     }
 }
