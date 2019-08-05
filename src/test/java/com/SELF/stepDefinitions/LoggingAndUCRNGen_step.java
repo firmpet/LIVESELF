@@ -265,10 +265,10 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='module-srt-selector']/button")).click();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
         driver.switchTo().frame(driver.findElement(By.id("form_one")));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         //driver.findElement(By.id("comma")).sendKeys("Footpath,Park,Road,Cycle Track");
 
