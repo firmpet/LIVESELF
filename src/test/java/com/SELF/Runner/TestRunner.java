@@ -132,7 +132,7 @@ public class TestRunner {
 
         // Close the driver
 
-        //driver.quit();
+        driver.quit();
 
     }
 }
