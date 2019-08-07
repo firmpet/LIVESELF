@@ -162,9 +162,10 @@ public class CalculationFamPO {
     public void submitBtn()throws Throwable{
         Thread.sleep(2000);
         CtaSubmit.click();
+        Thread.sleep(3000);
     }
     public void submitPage()throws Throwable{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         SuccessfulPage.isDisplayed();
         Thread.sleep(4000);
     }

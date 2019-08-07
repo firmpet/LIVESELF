@@ -28,6 +28,7 @@ public class ContinueFromDashboard_step extends TestRunner {
         Thread.sleep(2000);
 
         String caseNumber = driver.findElement(By.xpath("//*[@id='text1']")).getAttribute("value").toString();
+        Thread.sleep(2000);
 
         System.out.println(caseNumber);
         Thread.sleep(2000);
@@ -44,7 +45,7 @@ public class ContinueFromDashboard_step extends TestRunner {
         driver.switchTo().frame(driver.findElement(By.id("CommonDashboard")));
         //Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id='dashNewSubTabs']/li[3]/a")).click();
-        Thread.sleep(13000);
+        Thread.sleep(8000);
 
         driver.findElement(By.xpath("//*[@id='AllCases']/div[1]/div[2]/div/input")).sendKeys(caseNumber);
         Thread.sleep(7000);

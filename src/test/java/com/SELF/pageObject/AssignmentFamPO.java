@@ -33,14 +33,8 @@ public class AssignmentFamPO {
     @FindBy (id = "summary_show")
     private WebElement SummaryField;
 
-//    @FindBy (id = "select1")
-//    private WebElement SpecificUserField;
-
     @FindBy (xpath = "//*[@id='select1']")
     private WebElement UserEmail;
-
-//    @FindBy (id = "assignToSpecificG")
-//    private WebElement SpecificGroup;
 
     @FindBy (id = "assignToSpecificG")
     private WebElement SpecificGroupField;
@@ -50,7 +44,6 @@ public class AssignmentFamPO {
 
     @FindBy (xpath = "//*[@id='page']/section/section/div/div[1]/p[2]")
     private WebElement SuccessfulSubmission;
-
 
 
 
@@ -67,6 +60,7 @@ public class AssignmentFamPO {
         driver.switchTo().frame(driver.findElement(By.id("fillform-frame-1")));
         Thread.sleep(3000);
         DashboardPage.isDisplayed();
+        Thread.sleep(2000);
     }
 
     public void clearField(){
@@ -91,7 +85,7 @@ public class AssignmentFamPO {
 
     public void submitBtn()throws Throwable{
         CtaSubmit.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     public void formSubmit() throws Throwable{

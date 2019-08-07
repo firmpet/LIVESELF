@@ -67,8 +67,8 @@ public class StageLoopBackPO {
         Submission.click();
     }
     public void referencePage() throws Throwable {
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         Reference.isDisplayed();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
 }

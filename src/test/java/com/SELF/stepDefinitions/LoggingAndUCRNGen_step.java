@@ -134,13 +134,13 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='tbody_users']/tr/td[4]/button")).click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         String ucrn = driver.findElement(By.xpath("//*[@id='user_ucrn']")).getAttribute("value").toString();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         System.out.println(ucrn);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         String CopyText = driver.findElement(By.xpath("//*[@id='user_config']/form/div[4]/div/p")).getText();
         Thread.sleep(3000);
@@ -187,25 +187,26 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         Thread.sleep(3000);
 
         driver.navigate().to("https://releasetesting-inttest.achieveservice.com/login/?support");
+//        driver.navigate().to("https://releasetesting-daily.achieveservice.com/login/?support");
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div[3]/a")).click();
-        Thread.sleep(3000);
+        Thread.sleep(6000);
 
         driver.findElement(By.xpath("//*[text()='Settings']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(6000);
 
         driver.findElement(By.xpath("//*[text()=' CSA Accounts']")).click();
-        Thread.sleep(3000);
+        Thread.sleep(7000);
 
         driver.findElement(By.id("AddCSAMapping")).click();
-        Thread.sleep(3000);
+        Thread.sleep(6000);
 
         driver.findElement(By.xpath("//*[@id='alias']")).sendKeys(CopyText);
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         driver.findElement(By.xpath("//*[@id='first_name']")).sendKeys("releasetesting");
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         driver.findElement(By.xpath("//*[@id='last_name']")).sendKeys("new");
         Thread.sleep(3000);
@@ -219,13 +220,8 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         driver.findElement(By.xpath("//*[text()='Save changes']")).click();
         Thread.sleep(5000);
 
-//        driver.findElement(By.xpath("//*[@id='as-navigation']/ul[2]/li")).click();
-//        Thread.sleep(3000);
-//
-//        driver.findElement(By.xpath("//*[@id='as-navigation']/ul[2]/li/ul/li[6]/a")).click();
-//        Thread.sleep(3000);
-
         driver.navigate().to("https://releasetesting-inttest.achieveservice.com/login/?logout");
+//        driver.navigate().to("https://releasetesting-daily.achieveservice.com/login/?logout");
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("/html/body/div[1]/div/div/p/a")).click();
@@ -265,7 +261,7 @@ public class LoggingAndUCRNGen_step extends TestRunner {
         Thread.sleep(3000);
 
         driver.findElement(By.xpath("//*[@id='module-srt-selector']/button")).click();
-        Thread.sleep(10000);
+        Thread.sleep(25000);
 
         driver.switchTo().frame(driver.findElement(By.id("form_one")));
         Thread.sleep(3000);
