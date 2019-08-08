@@ -2,7 +2,7 @@ package com.SELF.stepDefinitions;
 
 import com.SELF.Runner.TestRunner;
 import com.SELF.pageObject.EscalationFormPO;
-import com.SELF.pageObject.TRF_LoginPO;
+import com.SELF.pageObject.LoginPO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,16 +10,14 @@ import cucumber.api.java.en.When;
 import org.testng.Assert;
 
 public class EscalationForm_step extends TestRunner {
-    TestAssert testAssert;
-
+    private TestAssert testAssert;
     private EscalationFormPO esca = new EscalationFormPO(driver);
-    private TRF_LoginPO hp = new TRF_LoginPO(driver);
+    private LoginPO hp = new LoginPO(driver);
 
 
     @Given("^I login with valid credentials$")
     public void iLoginWithValidCredentials() throws Throwable{
         hp.Login();
-
         Thread.sleep(2000);
     }
 
@@ -31,7 +29,6 @@ public class EscalationForm_step extends TestRunner {
     @Then("^Escalation Form One is displayed$")
     public void escalationFormOneIsDisplayed() throws Throwable {
         Assert.assertFalse(testAssert.validateElementExistByXpath(driver, "//*[text()='Escalation Form One']"));
-        //Thread.sleep(1000);
     }
 
     @When("^I entered Testing in the Text field$")

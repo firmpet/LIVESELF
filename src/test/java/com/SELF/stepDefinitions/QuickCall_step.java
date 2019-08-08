@@ -7,10 +7,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class QuickCall_step extends TestRunner {
-    QuickCallPO call = new QuickCallPO(driver);
+    private QuickCallPO call = new QuickCallPO(driver);
 
 
-    
+
     @When("^I select Release Testing radio button$")
     public void iSelectReleaseTestingRadioButton() throws Throwable{
         call.releaseBtn();
