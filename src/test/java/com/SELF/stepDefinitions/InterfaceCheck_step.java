@@ -9,6 +9,7 @@ public class InterfaceCheck_step extends TestRunner {
     private InterfaceCheckPO inter = new InterfaceCheckPO(driver);
     private TestAssert testAssert;
 
+
     @When("^I click Cta FAQs$")
     public void iClickCtaFAQs() throws Throwable{
         inter.faqsBtn();

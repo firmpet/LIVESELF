@@ -19,6 +19,7 @@ public class MyGovScotHighlandPO {
         config= ResourceBundle.getBundle("ConFig");
     }
 
+
     //To initialise Web locators
     @FindBy (xpath = "//*[@id='self-content']/p[2]/a[2]/img")
     private WebElement SignInPortal;

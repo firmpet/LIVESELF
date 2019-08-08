@@ -20,6 +20,7 @@ public class InboxEmail_ContentAndOpenPO  {
         config= ResourceBundle.getBundle("ConFig");
     }
 
+
     //To initialise Element locator
     @FindBy (xpath = "//*[@id='inboxnew_7706']")
     private WebElement InboxModal;

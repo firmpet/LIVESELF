@@ -10,6 +10,7 @@ public class MyGovScotHighland_step extends TestRunner {
     MyGovScotHighlandPO highland = new MyGovScotHighlandPO(driver);
 
 
+
     @When("^I navigate to Highland Council page \"([^\"]*)\"$")
     public void i_navigate_to_Highland_Council_page(String HighlandCouncil) throws Throwable {
         highland.highlandCouncil(HighlandCouncil);
