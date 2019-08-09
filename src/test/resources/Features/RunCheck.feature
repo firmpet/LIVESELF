@@ -1,4 +1,4 @@
-@rege
+@reg
 Feature: Run Check
 
   Scenario: Checks

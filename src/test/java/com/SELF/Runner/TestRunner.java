@@ -23,7 +23,7 @@ import static com.cucumber.listener.Reporter.setTestRunnerOutput;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"com.SELF.stepDefinitions"},
-        tags = {"@rege"},
+        tags = {"@reg"},
         format = {
                 "pretty",
                 "html:target/site/cucumber-pretty",
